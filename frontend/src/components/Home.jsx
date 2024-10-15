@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { FaFileWord } from "react-icons/fa";
 import axios from 'axios';
-import Footer from './Footer';
 
 
 function Home() {
@@ -29,10 +28,10 @@ setConvert(
 const formData=new FormData();
 formData.append("file",selectedFile)
 try {
-  const response=await axios.post("/home",formData,{
+  const response=await axios.post("https://word-to-pdf-converter-jlh9.onrender.com/home",formData,{
     responseType:"blob",
   });
-    console.log(response)
+  
   const url=window.URL.createObjectURL(new Blob([response.data]))
 
   const link=document.createElement("a")
