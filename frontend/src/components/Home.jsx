@@ -28,7 +28,7 @@ setConvert(
 const formData=new FormData();
 formData.append("file",selectedFile)
 try {
-  const response=await axios.post("https://word-to-pdf-converter-jlh9.onrender.com/home",formData,{
+  const response=await axios.post("/home",formData,{
     responseType:"blob",
   });
   

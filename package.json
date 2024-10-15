@@ -13,6 +13,7 @@
   "author": "Vivek Verma",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.7",
     "cors": "^2.8.5",
     "docx-pdf": "^0.0.1",
     "dotenv": "^16.4.5",
