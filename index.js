@@ -47,10 +47,12 @@ const storage = multer.diskStorage({
 
         docxtopdf(req.file.path,outPath,(err,result)=>{
             if(err){
+              alert("Error occured line 54",err)
               console.log(err);
               return res.status(500).json({
                 message:"Error in convertion"
               })
+             
             }
             res.download(outPath,()=>{
                 console.log("File Downloaded")
@@ -61,6 +63,7 @@ const storage = multer.diskStorage({
         res.status(500).json({
             message:"Internal Server Error"
         })
+        alert("Error occured line 65",err)
         
     }
   })
